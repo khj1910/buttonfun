@@ -8,13 +8,29 @@
 
 import UIKit
 
+
+
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mylabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    @IBAction func buttonPressed(_ sender: Any) {
+        mylabel.text = "Hello Button Event"
+        //print("Hello Button Event")
+    }
+    
+    @IBAction func label_Clear(_ sender: Any) {
+        mylabel.text = ""
+    }
+    @IBAction func changeViewColor(_ sender: Any) {
+        self.view.backgroundColor = UIColor.white
+    }
+    
 }
 
